@@ -1,0 +1,21 @@
+{% extends "usuarios/base.html" %}
+{% block conteudo %}
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+        <!--! getting inforções do models.py (DB) -->
+        <!--! laço de repetição para passsar por todos os valores -->
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

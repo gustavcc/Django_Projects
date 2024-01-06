@@ -1,0 +1,23 @@
+{% extends "app_cadastro/partials/base.html" %}
+{% block conteudo %}
+
+<main>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Primeira</th>
+            <th>Segunda</th>
+        </tr>
+        <!--! getting inforções do models.py (DB) -->
+        <!--! laço de repetição para passsar por todos os valores -->
+        {% for corte in cortes %}
+        <tr>
+            <td>{{corte.id_corte}}</td>
+            <td>{{corte.primeira}}</td>
+            <td>{{corte.segunda}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</main>
+
+{% endblock %}
