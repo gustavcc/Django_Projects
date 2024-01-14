@@ -4,14 +4,12 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# MEDIA_URL = '/static/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+4^@332ggm(lpw39)o0u6zzyo($&iz^4dtkz3i=(muw84b=p!7'
+SECRET_KEY = 'django-insecure-qd$@dh-hf!oh!el0ecl8od(4+3$qg6r*3m1r_oo3^)-0-bam6h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -28,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'paginas'
+    'app_login',
 ]
 
 MIDDLEWARE = [
@@ -41,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'bananas_project.urls'
+ROOT_URLCONF = 'login_cadastro.urls'
 
 TEMPLATES = [
     {
@@ -59,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bananas_project.wsgi.application'
+WSGI_APPLICATION = 'login_cadastro.wsgi.application'
 
 
 # Database
@@ -112,7 +110,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banana's</title>
+
+    <link rel="icon" href="{% static 'img/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Banana's</h1>
+    </header>
+    
+    <main>
+        <form action="{% url 'dashboard' %}" method="post">
+            {% csrf_token %}
+            <h1>Cadastro do Corte</h1>
+            Primeira <input name="primeira" type="number">
+            Segunda <input name="segunda" type="number">
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
