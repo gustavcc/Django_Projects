@@ -22,30 +22,33 @@
 
     <main>
         <div class="left">
-            <img src="{% static 'app_login/img/Login-amico copy.png'%}" alt="">
+            <img src="{% static 'app_login/img/Signup-amico.png'%}" alt="">
         </div>
         <div class="right">
-            <form action="{% url 'dashboard' %}" method="post">
+            <form action="{% url 'cadastro' %}" method="post">
                 {% csrf_token %}
                 <div class="container">
                     <h2>Seja bem-vindo</h2>
                     <p>Faça seu cadastro!</p>
                     <div class="box">
-                        <input class="required" name="nome" type="text" placeholder="Nome" required>
+                        <input class="required" name="username" type="text" placeholder="Usuário" required>
                     </div>
                     <div class="box">
                         <input class="required" name="email" type="email" placeholder="Email" required>
                     </div>
                     <div class="box">
-                        <input name="senha" id="password" type="password" placeholder="Senha" required>
+                        <input name="senha" id="senha" type="password" placeholder="Senha" required>
                         <i id="eye" class="fa-solid fa-eye-slash"></i>
                     </div>
                     <div class="box">
                         <p>Já tem uma conta? <span><a href="{% url 'login'  %}">Login</a></span></p>
                     </div>
                     <div class="lets-go">
-                        <button type="submit">Enviar</button>
+                        <button type="submit">Lets go!</button>
                     </div>
+                    {% if error_message %}
+                        <p class="error_message">{{ error_message }}</p>
+                    {% endif %}
                 </div>
             </form>
         </div>
