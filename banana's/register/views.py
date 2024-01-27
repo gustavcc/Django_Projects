@@ -2,4 +2,4 @@ from django.shortcuts import render
 from .models import Cut
 
 def register(request):
-    return render(request, 'pages/register.html')
+    return render(request, 'register.html')
