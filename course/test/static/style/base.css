@@ -430,7 +430,7 @@ input:checked+.slider:before {
 
 .hamburger-line {
     fill: none;
-    stroke: #000;
+    stroke: var(--text);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
@@ -474,7 +474,7 @@ input:checked+.slider:before {
         flex-direction: column;
         width: 80vw;
         height: 100vh;
-        background: #fff;
+        background: var(--bg);
         border-right: 2px solid #696969;
         border-top: 2px solid #696969;
         border-radius: 0 10px 0 0;
@@ -482,6 +482,7 @@ input:checked+.slider:before {
         left: -80vw;
         top: 60px;
         transition: all 1s ease;
+        z-index: 999;
     }
     
     #menu a {
@@ -989,6 +990,10 @@ footer {
 
 .rights {
     padding: 1em;
+}
+
+.social a {
+    font-size: 20pt;
 }
 
 footer h2 {
