@@ -1,0 +1,2 @@
+Como fazer a paginação para 10 questões por tela:
+https://chat.openai.com/share/0b4af7ef-05a8-4286-8d77-6f379d67e8ed
