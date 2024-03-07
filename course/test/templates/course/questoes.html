@@ -30,8 +30,8 @@
                 </svg>
             </label>
 
-            <a href="#"><img src="/test/static/img/logo_white.png" alt=""></a>
-            <a href="#">COURSE</a>
+            <a href="#"><img src="/test/static/img/logo_course.jpeg" alt=""></a>
+            <a href="#">Course</a>
         </div>
 
         <div class="menu-right">
@@ -66,42 +66,11 @@
                     </form>
                 </div>
             </nav>
-            <dialog id="menu-activate">
-                <a href="dashboard.html">Home</a>
-                <a href="questoes.html">Questões</a>
-                <a href="#">Sobre</a>
-                <div class="search-dark-mode">
-                    <form class="search-form">
-                        <label for="search">
-                            <input required="" autocomplete="off" placeholder="Search" id="search" type="text">
-                            <div class="icon">
-                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="swap-on">
-                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="swap-off">
-                                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                            </div>
-                            <button type="reset" class="close-btn">
-                                <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </label>
-                    </form>
-                </div>
-            </dialog>
             <label class="switch">
-                <input type="checkbox">
+                <input id="switch" type="checkbox">
                 <span class="slider"></span>
             </label>
-            <!--! <div class="login">
+            <!-- <div class="login">
                 <a href="{% url 'Dashboard' %}">Entrar</a>
             </div> -->
             <div class="menu-user">
@@ -128,6 +97,90 @@
     </header>
 
     <main class="main-question">
+
+        <div class="questoes">
+            <div class="text-question">
+                <h3>Q. {{1}}</h3>
+            </div>
+            <div class="quiz">
+                <h2 id="pergunta">Pergunta da questão</h2>
+                <div id="buttons-resposta">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="questoes">
+            <div class="text-question">
+                <h3>Q. {{2}}</h3>
+            </div>
+            <div class="quiz">
+                <h2 id="pergunta">Pergunta da questão</h2>
+                <div id="buttons-resposta">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="questoes">
+            <div class="text-question">
+                <h3>Q. {{3}}</h3>
+            </div>
+            <div class="quiz">
+                <h2 id="pergunta">Pergunta da questão</h2>
+                <div id="buttons-resposta">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="questoes">
+            <div class="text-question">
+                <h3>Q. {{4}}</h3>
+            </div>
+            <div class="quiz">
+                <h2 id="pergunta">Pergunta da questão</h2>
+                <div id="buttons-resposta">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="questoes">
+            <div class="text-question">
+                <h3>Q. {{5}}</h3>
+            </div>
+            <div class="quiz">
+                <h2 id="pergunta">Pergunta da questão</h2>
+                <div id="buttons-resposta">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="paginacao">
+            <span id="back" class="angles"><i class="fa-solid fa-angles-left"></i></span>
+            <!-- Indicador de página -->
+            <span id="current" class="pagina" data-pagina="1">1</span>
+            <span class="pagina" data-pagina="2">2</span>
+            <!-- Adicione mais spans conforme necessário -->
+            <span id="next" class="angles"><i class="fa-solid fa-angles-right"></i></span>
+        </div>
 
     </main>
 
