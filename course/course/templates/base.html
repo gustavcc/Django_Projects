@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" href="{% static 'img/logo_course.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/base.js' %}" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!--* Menu Hamburger -->
+            <label class="hamburger">
+                <input id="menu-hamburger" type="checkbox">
+                <svg viewBox="0 0 32 32">
+                    <path class="hamburger-line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="hamburger-line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+
+            <a href="#"><img src="{% static 'img/logo_course.jpeg' %}" alt=""></a>
+            <a href="#">Course</a>
+        </div>
+
+        <div class="menu-right">
+            <nav id="menu">
+                <a href="dashboard.html">Home</a>
+                <a href="questoes.html">Questões</a>
+                <a href="#">Sobre</a>
+                <div class="search-dark-mode">
+                    <form class="search-form">
+                        <label for="search">
+                            <input required="" autocomplete="off" placeholder="Search" id="search" type="text">
+                            <div class="icon">
+                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="swap-on">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="swap-off">
+                                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                            </div>
+                            <button type="reset" class="close-btn">
+                                <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </label>
+                    </form>
+                </div>
+            </nav>
+            <label class="switch">
+                <input id="switch" type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <!-- <div class="login">
+                <a href="{% url 'Dashboard' %}">Entrar</a>
+            </div> -->
+            <div class="menu-user">
+                <ul class="dropdown-menu">
+                    <li>
+                        <a id="menu-icon" href="#"><i class="fa-solid fa-user"></i></a>
+                        <ul class="dropdown">
+                            <li>
+                                <p>Olá, </p>
+                            </li>
+                            <li><a href="#">
+                                    <span><i class="fa-solid fa-house"></i></span>
+                                    <span>Acessar Conta</span>
+                                </a></li>
+                            <li><a id="sair" href="#">
+                                    <span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                    <span>Sair</span>
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="footer_section">
+            <div class="footer-item">
+                <a href="#"><img src="{% static 'img/logo_course.jpeg' %}" alt=""></a>
+                <h2>Course</h2>
+            </div>
+            <div class="footer-item social">
+                <ul>
+                    <li> <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i> </a></li>
+                    <li> <a href="" target="_blank"> <i class="fa-brands fa-linkedin-in"></i> </a></li>
+                    <li> <a href="" target="_blank"> <i class="fa-brands fa-youtube"></i> </a></li>
+                    <li> <a href="" target="_blank"> <i class="fa-brands fa-twitter"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="rights">© Course 2024 | All Rights Reserveds</p>
+        <p class="rights"> By: <a href="">Gustavo Cardoso Costa</a></p>
+    </footer>
+</body>
+
+</html>
