@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Dashboard | Course{% endblock %}
+{% block content %}
+{% load static %}
+
+<main class="main-dash">
+    <section class="recepcao">
+        <div class="text-recepcao">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="text-dash">Seja bem-vindo, {{'Gustavo'}}, ao seu <span id="dash">Dashboard</span></p>
+        </div>
+        <img src="{% static 'course/img/Webinar-pana.svg' %}"alt="Image">
+
+        </div>
+    </section>
+    <p class="title-dash">Questões</p>
+    <section class="questoes-dash">
+        <a href="questoes.html" class="box-questoes">
+            <i id="icon-check" class="fa-regular fa-circle-check"></i>
+            <p class="text-dash">Lista de Questões</p>
+        </a>
+        <div class="box-duvidas">
+            <i id="icon-d" class="fa-solid fa-chart-simple"></i>
+            <p class="text-dash">Desempenho</p>
+        </div>
+    </section>
+</main>
+
+<aside class="aside-dash">
+    <section class="perfil-dash">
+        <p class="text-dash">Perfil de Usuário</p>
+        <a href="perfil.html" class="image-perfil">
+            <img id="image" src="{% static 'course/img/user.png' %}" alt="Perfil usuário">
+            <!-- <i class="fa-solid fa-user"></i> -->
+        </a>
+        <a href="perfil.html" class="box-perfil">
+            <p id="user-perfil">{{'Gustavo Cardoso Costa'}}</p>
+        </a>
+        <div class="calender">
+            <p>Calender</p>
+        </div>
+    </section>
+</aside>
+
+{% endblock %}
