@@ -17,4 +17,3 @@ const dark_mode = document.getElementById('switch');
 dark_mode.addEventListener('change', ()=>{
     html.classList.toggle('dark-mode')
 })
-

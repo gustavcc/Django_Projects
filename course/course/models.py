@@ -3,11 +3,11 @@ from django.db import models
 class Question(models.Model):
     
     CORRECT = (
-        ('answer_1','Answer_1'),
-        ('answer_2','Answer_2'),
-        ('answer_3','Answer_3'),
-        ('answer_4','Answer_4'),
-        ('answer_5','Answer_5'),
+        ('answer_1','a)'),
+        ('answer_2','b)'),
+        ('answer_3','c)'),
+        ('answer_4','d)'),
+        ('answer_5','e)'),
     )
     
     title = models.TextField()

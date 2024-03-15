@@ -4,23 +4,23 @@
 
 <main class="main-question">
 
+    {% for question in questions %}
     <div class="questoes">
-        {% for question in questions %}
         <div class="text-question">
             <p>Q. {{question.id}}</p>
         </div>
         <div class="quiz">
             <p class="enunciado" id="pergunta">{{question.title}}</p>
             <div class="answers" id="buttons-resposta">
-                <button class="btn">question.answer_1</button>
-                <button class="btn">question.answer_2</button>
-                <button class="btn">question.answer_3</button>
-                <button class="btn">question.answer_4</button>
-                <button class="btn">question.answer_5</button>
+                <button class="btn">{{question.answer_1}}</button>
+                <button class="btn">{{question.answer_2}}</button>
+                <button class="btn">{{question.answer_3}}</button>
+                <button class="btn">{{question.answer_4}}</button>
+                <button class="btn">{{question.answer_5}}</button>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 
     <div class="questoes">
         <div class="text-question">

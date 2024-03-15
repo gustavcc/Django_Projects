@@ -8,7 +8,5 @@ def dashboard(request):
     return render(request, 'course/dashboard.html')
 
 def questions(request):
-    questions = {
-        'questions': Question.objects.all()
-    }
+    questions = Question.objects.all()
     return render(request, 'course/questions.html', {'questions': questions})
