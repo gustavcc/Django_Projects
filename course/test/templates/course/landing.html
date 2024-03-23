@@ -30,41 +30,15 @@
                 </svg>
             </label>
 
-            <a href="#"><img src="/test/static/img/logo_course.jpeg" alt=""></a>
+            <a href="#"><img src="{% static 'course/img/logo_course.jpeg' %}" alt=""></a>
             <a href="#">Course</a>
         </div>
 
         <div class="menu-right">
             <nav id="menu">
-                <a href="dashboard.html">Home</a>
-                <a href="questoes.html">Questões</a>
-                <a href="#">Sobre</a>
-                <div class="search-dark-mode">
-                    <form class="search-form">
-                        <label for="search">
-                            <input required="" autocomplete="off" placeholder="Search" id="search" type="text">
-                            <div class="icon">
-                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="swap-on">
-                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="swap-off">
-                                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                            </div>
-                            <button type="reset" class="close-btn">
-                                <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </label>
-                    </form>
-                </div>
+                <a class="b-link" href="{% url 'Dashboard' %}">Home</a> <!--aparecer se for autenticado-->
+                <a class="b-link" href="{% url 'Questoes' %}">Questões</a>
+                <a class="b-link" href="#">Sobre</a>
             </nav>
             <label class="switch">
                 <input id="switch" type="checkbox">
@@ -76,7 +50,7 @@
             <div class="menu-user">
                 <ul class="dropdown-menu">
                     <li>
-                        <a id="menu-icon" href="#"><i class="fa-solid fa-user"></i></a>
+                        <i id="menu-icon" class="fa-solid fa-user"></i>
                         <ul class="dropdown">
                             <li>
                                 <p>Olá, </p>
@@ -100,12 +74,9 @@
         <div class="sec-main-home">
             <div class="course-text-home">
                 <h1>Course</h1>
-                <p>O <span class="science">banco de questões</span> mais completo da internet! Torne-se um especialista nas áreas do <span class="science">conhecimento!</span></p>
-                <p></p>
+                <p>O banco de questões mais completo da internet! Torne-se um especialista nas áreas do conhecimento!
+                </p>
             </div>
-            <!-- <div class="course-img-home">
-                <img src="/test/static/img/arranjo-do-conceito-de-verdade-com-uma-lupa.jpg" alt="Image">
-            </div> -->
             <div id="square_1"></div>
             <div id="square_2"></div>
             <div id="square_3"></div>
@@ -117,7 +88,7 @@
     <footer>
         <div class="footer_section">
             <div class="footer-item">
-                <a href="#"><img src="/test/static/img/logo_course.jpeg" alt=""></a>
+                <a href="#"><img src="{% static 'course/img/logo_course.jpeg' %}" alt=""></a>
                 <h2>Course</h2>
             </div>
             <div class="footer-item social">
@@ -130,7 +101,6 @@
             </div>
         </div>
         <p class="rights">© Course 2024 | All Rights Reserveds</p>
-        <p class="rights"> By: <a href="">Gustavo Cardoso Costa</a></p>
     </footer>
 </body>
 

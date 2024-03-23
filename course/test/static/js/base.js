@@ -4,9 +4,9 @@ const menu = document.getElementById('menu');
 
 hamburger.addEventListener('change', () => {
     if (hamburger.checked) {
-        menu.style.left = '0';
+        menu.style.left = '-15px';
     } else {
-        menu.style.left = '-80vw';
+        menu.style.left = '-90vw';
     }
 });
 
