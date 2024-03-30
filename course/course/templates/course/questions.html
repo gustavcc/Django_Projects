@@ -4,7 +4,7 @@
 
 <main class="main-question">
 
-    {% for question in questions %}
+    <!-- {% for question in questions %}
     <div class="questoes">
         <div class="text-question">
             <p>Q. {{question.id}}</p>
@@ -20,61 +20,63 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endfor %} -->
 
+    {% for question in questions %}
     <div class="questoes">
         <div class="text-question">
-            <p>Q. {{3}}</p>
+            <div class="informations">
+                <p class="indexQuestao">Q.{{1}}</p>
+                <p>-</p>
+                <p class="prova">Enem</p>
+                <p>-</p>
+                <p class="conteudo">Matemática</p>
+                <p>-</p>
+                <p class="ano">2023</p>
+            </div>
+            <p class="acertou">Você acertou!</p>
         </div>
         <div class="quiz">
-            <p class="enunciado" id="pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dicta ratione debitis. Iusto odit fugiat fugit. Et eligendi illo maiores necessitatibus consequatur laudantium ex, officia optio, aspernatur mollitia doloremque saepe.</p>
-            <div class="answers" id="buttons-resposta">
-                <button class="btn">Resposta 1</button>
-                <button class="btn">Resposta 2</button>
-                <button class="btn">Resposta 3</button>
-                <button class="btn">Resposta 4</button>
+            <p class="enunciado" id="pergunta">{{question.title}}</p>
+            <div class="answers">
+                {% if question.correct == 'A'%}
+                <div class="answer">
+                    <p>A)</p>
+                    <button id="{{question.correct}}" value="A" class="btn">{{question.answer_a}}</button>
+                </div>
+                {% if question.correct == 'B'%}
+                <div class="answer">
+                    <p>B)</p>
+                    <button id="{{question.correct}}" value="B" class="btn">{{question.answer_b}}</button>
+                </div>
+                {% elif question.correct == 'C'%}
+                <div class="answer">
+                    <p>C)</p>
+                    <button id="{{question.correct}}" value="C" class="btn">{{question.answer_c}}</button>
+                </div>
+                {% elif question.correct == 'D'%}
+                <div class="answer">
+                    <p>D)</p>
+                    <button id="{{question.correct}}" value="D" class="btn">{{question.answer_d}}</button>
+                </div>
+                {% elii question.correct == 'E'%}
+                <div class="answer">
+                    <p>E)</p>
+                    <button id="{{question.correct}}" value="E" class="btn">{{question.answer_e}}</button>
+                </div>
+                {% endif %}
             </div>
         </div>
-    </div>
+        {% endfor %}
 
-    <div class="questoes">
-        <div class="text-question">
-            <p>Q. {{4}}</p>
+        <div id="paginacao">
+            <span id="back" class="angles"><i class="fa-solid fa-angles-left"></i></span>
+            <!-- Indicador de página -->
+            <span id="current" class="pagina" data-pagina="1">1</span>
+            <span class="pagina" data-pagina="2">2</span>
+            <!-- Adicione mais spans conforme necessário -->
+            <span id="next" class="angles"><i class="fa-solid fa-angles-right"></i></span>
         </div>
-        <div class="quiz">
-            <p class="enunciado" id="pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dicta ratione debitis. Iusto odit fugiat fugit. Et eligendi illo maiores necessitatibus consequatur laudantium ex, officia optio, aspernatur mollitia doloremque saepe.</p>
-            <div class="answers" id="buttons-resposta">
-                <button class="btn">Resposta 1</button>
-                <button class="btn">Resposta 2</button>
-                <button class="btn">Resposta 3</button>
-                <button class="btn">Resposta 4</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="questoes">
-        <div class="text-question">
-            <p>Q. {{5}}</p>
-        </div>
-        <div class="quiz">
-            <p class="enunciado" id="pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dicta ratione debitis. Iusto odit fugiat fugit. Et eligendi illo maiores necessitatibus consequatur laudantium ex, officia optio, aspernatur mollitia doloremque saepe.</p>
-            <div class="answers" id="buttons-resposta">
-                <button class="btn">Resposta 1</button>
-                <button class="btn">Resposta 2</button>
-                <button class="btn">Resposta 3</button>
-                <button class="btn">Resposta 4</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="paginacao">
-        <span id="back" class="angles"><i class="fa-solid fa-angles-left"></i></span>
-        <!-- Indicador de página -->
-        <span id="current" class="pagina" data-pagina="1">1</span>
-        <span class="pagina" data-pagina="2">2</span>
-        <!-- Adicione mais spans conforme necessário -->
-        <span id="next" class="angles"><i class="fa-solid fa-angles-right"></i></span>
-    </div>
 </main>
 
 {% endblock %}
