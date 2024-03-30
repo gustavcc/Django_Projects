@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 ]{% block title %}Questões | Course{% endblock %}
 {% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'course/css/base.css' %}">
 
 <main class="main-question">
 
@@ -26,13 +29,13 @@
     <div class="questoes">
         <div class="text-question">
             <div class="informations">
-                <p class="indexQuestao">Q.{{1}}</p>
+                <p class="indexQuestao">Q.{{question.id}}</p>
                 <p>-</p>
-                <p class="prova">Enem</p>
+                <p class="prova">{{question.test}}</p>
                 <p>-</p>
-                <p class="conteudo">Matemática</p>
+                <p class="conteudo">{{question.content}}</p>
                 <p>-</p>
-                <p class="ano">2023</p>
+                <p class="ano">{{question.year}}</p>
             </div>
             <p class="acertou">Você acertou!</p>
         </div>
@@ -44,7 +47,7 @@
                     <p>A)</p>
                     <button id="{{question.correct}}" value="A" class="btn">{{question.answer_a}}</button>
                 </div>
-                {% if question.correct == 'B'%}
+                {% elif question.correct == 'B'%}
                 <div class="answer">
                     <p>B)</p>
                     <button id="{{question.correct}}" value="B" class="btn">{{question.answer_b}}</button>
@@ -59,7 +62,7 @@
                     <p>D)</p>
                     <button id="{{question.correct}}" value="D" class="btn">{{question.answer_d}}</button>
                 </div>
-                {% elii question.correct == 'E'%}
+                {% elif question.correct == 'E'%}
                 <div class="answer">
                     <p>E)</p>
                     <button id="{{question.correct}}" value="E" class="btn">{{question.answer_e}}</button>
@@ -67,16 +70,18 @@
                 {% endif %}
             </div>
         </div>
-        {% endfor %}
+    </div>
+    {% endfor %}
 
-        <div id="paginacao">
-            <span id="back" class="angles"><i class="fa-solid fa-angles-left"></i></span>
-            <!-- Indicador de página -->
-            <span id="current" class="pagina" data-pagina="1">1</span>
-            <span class="pagina" data-pagina="2">2</span>
-            <!-- Adicione mais spans conforme necessário -->
-            <span id="next" class="angles"><i class="fa-solid fa-angles-right"></i></span>
-        </div>
+    <div id="paginacao">
+        <span id="back" class="angles"><i class="fa-solid fa-angles-left"></i></span>
+        <!-- Indicador de página -->
+        <span id="current" class="pagina" data-pagina="1">1</span>
+        <span class="pagina" data-pagina="2">2</span>
+        <!-- Adicione mais spans conforme necessário -->
+        <span id="next" class="angles"><i class="fa-solid fa-angles-right"></i></span>
+    </div>
+
 </main>
 
 {% endblock %}
